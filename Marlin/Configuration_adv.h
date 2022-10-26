@@ -1002,20 +1002,21 @@
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define positions for probe points.
-  #define TRAMMING_POINT_XY { {  20, 20 }, { 200,  20 }, { 380,  20 }, {  380, 200 }, { 200,  200 }, { 20,  200 }, { 20, 380 }, { 200, 380 }, { 380, 380 } }
+//  #define TRAMMING_POINT_XY { {  20, 20 }, { 200,  20 }, { 380,  20 }, {  380, 200 }, { 200,  200 }, { 20,  200 }, { 20, 380 }, { 200, 380 }, { 380, 380 } }
+  #define TRAMMING_POINT_XY { {  20, 20 }, { 380,  20 }, { 20, 380 }, { 380, 380 } }
 
 // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
-  #define TRAMMING_POINT_NAME_2 "Front-Middle"
-  #define TRAMMING_POINT_NAME_3 "Front-Right"
+//  #define TRAMMING_POINT_NAME_2 "Front-Middle"
+  #define TRAMMING_POINT_NAME_2 "Front-Right"
 
-  #define TRAMMING_POINT_NAME_4 "Middle-Right"
-  #define TRAMMING_POINT_NAME_5 "Center"
-  #define TRAMMING_POINT_NAME_6 "Middle-Left"
+//  #define TRAMMING_POINT_NAME_4 "Middle-Right"
+//  #define TRAMMING_POINT_NAME_5 "Center"
+//  #define TRAMMING_POINT_NAME_6 "Middle-Left"
 
-  #define TRAMMING_POINT_NAME_7 "Back-Left"
-  #define TRAMMING_POINT_NAME_8 "Back-Middle"
-  #define TRAMMING_POINT_NAME_9 "Back-Right"
+  #define TRAMMING_POINT_NAME_3 "Back-Left"
+//  #define TRAMMING_POINT_NAME_8 "Back-Middle"
+  #define TRAMMING_POINT_NAME_4 "Back-Right"
 
 
   #define RESTORE_LEVELING_AFTER_G35    // Enable to restore leveling setup after operation
@@ -2327,7 +2328,7 @@
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 4
+#define BUFSIZE 64
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of flash (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
@@ -2336,7 +2337,7 @@
 // For debug-echo: 128 bytes for the optimal speed.
 // Other output doesn't need to be that speedy.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256]
-#define TX_BUFFER_SIZE 0
+#define TX_BUFFER_SIZE 64
 
 // Host Receive Buffer Size
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be enough.
